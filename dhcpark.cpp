@@ -20,12 +20,22 @@ void handle_option(int option, int len, struct dhcp_packet *data)
 }
 
 
-void packet_send(void)
+
+void packet_send(int *options, int op_len, int request_ip)
 {
 	struct dhcp_packet packet;
 	packet.op = 2;
-}
 
+	for(int i = 0; i < op_len; i++)
+	{
+		switch(options[i])
+		{
+
+			case 55:
+
+		}
+	}
+}
 */
 
 int main(void)
@@ -72,9 +82,21 @@ int main(void)
 		{
 			printf("Receive byte of %lu, from %lu:%lu\n", recvLength, clientInfo.sin_addr.s_addr, clientInfo.sin_port);
 			cout << "DHCP MESSAGE PACKET : "<< endl;
+			printf("op : %u\n", Buffer.op);
+			printf("Hardware type = %u\n", Buffer.hw_type);
+			printf("hopcount : %u\n", Buffer.hop_count);
+			printf("transaction id : %u\n", Buffer.tx_id);
+			printf("nsecs : %u\n", Buffer.nsecs);
+			printf("cipaddr : %s\n", Buffer.cipaddr.s_addr);
+			printf("yipaddr : %s\n", Buffer.yipaddr.s_addr);
+			printf("sipaddr : %s\n", Buffer.sipaddr.s_addr);
+			printf("gipaddr : %s\n", Buffer.gipaddr.s_addr);
 			for(int i = 0 ; i < 6; i++)
 				printf("%x:", Buffer.chwaddr[i]);
 			cout << endl;
+			printf("Server name : %s\n", Buffer.sname);
+			printf("Boot File path : %s\n", Buffer.bfile);
+			printf("Options : \n");
 			if(!(Buffer.options[0] == 0x63 && Buffer.options[1] == 0x82 && Buffer.options[2] == 0x53 \
 						&& Buffer.options[3] == 0x63))
 			{
@@ -85,6 +107,7 @@ int main(void)
 			while(Buffer.options[i] != 0xff)
 			{
 				printf("Option : %d ", Buffer.options[i++]);
+				/*
 				switch(Buffer.options[i])
 				{
 					case 50: // preferred IP address reqeust
@@ -95,6 +118,7 @@ int main(void)
 						break; // save option datas to buff ? may be ? 
 
 				}
+				*/
 				printf("Option length = %d, Data ", Buffer.options[i]);
 				int tmp = Buffer.options[i++];
 				for(int k = 0; k < tmp; k++)
