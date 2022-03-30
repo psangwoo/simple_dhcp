@@ -80,17 +80,17 @@ int main(void)
 				(struct sockaddr *)&clientInfo, &clientAddressSize);
 		if(recvLength > 0)
 		{
-			printf("Receive byte of %lu, from %lu:%lu\n", recvLength, clientInfo.sin_addr.s_addr, clientInfo.sin_port);
+			printf("Receive byte of %lu, from %lu:%u\n", recvLength, inet_ntoa(clientInfo.sin_addr) ,ntohs(clientInfo.sin_port));
 			cout << "DHCP MESSAGE PACKET : "<< endl;
 			printf("op : %u\n", Buffer.op);
 			printf("Hardware type = %u\n", Buffer.hw_type);
 			printf("hopcount : %u\n", Buffer.hop_count);
 			printf("transaction id : %u\n", Buffer.tx_id);
 			printf("nsecs : %u\n", Buffer.nsecs);
-			printf("cipaddr : %s\n", Buffer.cipaddr.s_addr);
-			printf("yipaddr : %s\n", Buffer.yipaddr.s_addr);
-			printf("sipaddr : %s\n", Buffer.sipaddr.s_addr);
-			printf("gipaddr : %s\n", Buffer.gipaddr.s_addr);
+			printf("cipaddr : %s\n", inet_ntoa(Buffer.cipaddr));
+			printf("yipaddr : %s\n", inet_ntoa(Buffer.yipaddr));
+			printf("sipaddr : %s\n", inet_ntoa(Buffer.sipaddr));
+			printf("gipaddr : %s\n", inet_ntoa(Buffer.gipaddr));
 			for(int i = 0 ; i < 6; i++)
 				printf("%x:", Buffer.chwaddr[i]);
 			cout << endl;
