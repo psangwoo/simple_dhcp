@@ -3,9 +3,12 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <arpa/inet.h>
+#include <pthread.h>
 
 #include <iostream>
 #include <fstream>
+
+#include "queue.h"
 
 #define PORT_DHCP_SERVER 67
 #define PORT_DHCP_CLIENT 68
@@ -13,6 +16,7 @@
 #define DHCP_SERVERNAME_LENGTH 64
 #define DHCP_BOOTFILE_LENGTH 128
 #define DHCP_OPTION_LENGTH 1224
+
 using namespace std;
 
 using std::cout;

@@ -1,49 +1,9 @@
 #include "dhcpark.h"
 
-/*
-
-
-void handle_option(int option, int len, struct dhcp_packet *data)
-{
-	switch(option)
-	{
-		case 1:
-			//subnet mask
-		case 3:
-
-		case 55:
-			// 
-			break;
-
-
-	}
-}
-
-
-
-void packet_send(int *options, int op_len, int request_ip)
-{
-	struct dhcp_packet packet;
-	packet.op = 2;
-
-	for(int i = 0; i < op_len; i++)
-	{
-		switch(options[i])
-		{
-
-			case 55:
-
-		}
-	}
-}
-*/
-
 int main(void)
 {
 	struct dhcp_packet Buffer;
 	cout << sizeof(struct dhcp_packet) << endl;
-	ifstream configFile;
-	ofstream leaseLogFile;
 
 	struct sockaddr_in serverInfo = {};
 	struct sockaddr_in clientInfo = {};
@@ -52,45 +12,48 @@ int main(void)
 	socklen_t clientAddressSize = 0;
 
 	serverInfo.sin_family = AF_INET; // use IPv4
-	serverInfo.sin_addr.s_addr = htonl(INADDR_ANY); // htonl : change type long's byte sequence, host to network
-	serverInfo.sin_port = htons(PORT_DHCP_SERVER); // htons : change type short's byte sequence, host to network
+	serverInfo.sin_addr.s_addr = INADDR_ANY; // htonl : change type long's byte sequence, host to network
+	serverInfo.sin_port = htons(PORT_DHCP_CLIENT); // htons : change type short's byte sequence, host to network
 	// SOCKET listenerSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP); // tcp 
 	//
-	int serverSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP); // udp
+	int cerverSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP); // udp
 	int option = 1;
-	setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &option, sizeof(option)); // set multiple access to single port possible
-	if(serverSocket == -1)
+	setsockopt(cerverSocket, SOL_SOCKET, SO_REUSEADDR, &option, sizeof(option)); // set multiple access to single port possible
+	if(cerverSocket == -1)
 	{
 		cerr << "Cannot Create Server Socket, Quit." << endl;
 		return -1;
 	}
 
-	if(bind(serverSocket, (struct sockaddr *)&serverInfo, sizeof(serverInfo)) < 0)
+	if(bind(cerverSocket, (struct sockaddr *)&serverInfo, sizeof(serverInfo)) < 0)
 	{
 		cerr << "Cannot Bind Local Address, Quit." << endl;
-		close(serverSocket);
+		close(cerverSocket);
 		return -1;
 	}
 
 	while(1)
 	{
+		printf("aaa\n");
 		// wait to recv, save info of sender client
 		clientAddressSize = sizeof(clientInfo);
-		recvLength = recvfrom(serverSocket, (char *)&Buffer, sizeof(Buffer), 0, \
+		recvLength = recvfrom(cerverSocket, (char *)&Buffer, sizeof(Buffer), 0, \
 				(struct sockaddr *)&clientInfo, &clientAddressSize);
+
+		continue;
 		if(recvLength > 0)
 		{
-			printf("Receive byte of %lu, from %lu:%lu\n", recvLength, clientInfo.sin_addr.s_addr, clientInfo.sin_port);
+//			printf("Receive byte of %lu, from %lu:%u\n", recvLength, clientInfo.sin_addr.s_addr, ntohs(clientInfo.sin_port));
 			cout << "DHCP MESSAGE PACKET : "<< endl;
 			printf("op : %u\n", Buffer.op);
 			printf("Hardware type = %u\n", Buffer.hw_type);
 			printf("hopcount : %u\n", Buffer.hop_count);
 			printf("transaction id : %u\n", Buffer.tx_id);
-			printf("nsecs : %u\n", Buffer.nsecs);
-			printf("cipaddr : %s\n", Buffer.cipaddr.s_addr);
-			printf("yipaddr : %s\n", Buffer.yipaddr.s_addr);
-			printf("sipaddr : %s\n", Buffer.sipaddr.s_addr);
-			printf("gipaddr : %s\n", Buffer.gipaddr.s_addr);
+			printf("nsecs : %x\n", Buffer.nsecs);
+			printf("cipaddr : %s\n", inet_ntoa(Buffer.cipaddr));
+			printf("yipaddr : %s\n", inet_ntoa(Buffer.yipaddr));
+			printf("sipaddr : %s\n", inet_ntoa(Buffer.sipaddr));
+			printf("gipaddr : %s\n", inet_ntoa(Buffer.gipaddr));
 			for(int i = 0 ; i < 6; i++)
 				printf("%x:", Buffer.chwaddr[i]);
 			cout << endl;
@@ -131,7 +94,7 @@ int main(void)
 			printf("END : %d\n", Buffer.options[i]);
 		}
 	}
-	close(serverSocket);
+	close(cerverSocket);
 }
 
 
