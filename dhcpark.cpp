@@ -43,13 +43,21 @@ int main(void)
 		continue;
 		if(recvLength > 0)
 		{
+<<<<<<< HEAD
 //			printf("Receive byte of %lu, from %lu:%u\n", recvLength, clientInfo.sin_addr.s_addr, ntohs(clientInfo.sin_port));
+=======
+			printf("Receive byte of %lu, from %lu:%u\n", recvLength, inet_ntoa(clientInfo.sin_addr) ,ntohs(clientInfo.sin_port));
+>>>>>>> 09b0e4554ba7445da4985d5c4a443ab4cfd3c54f
 			cout << "DHCP MESSAGE PACKET : "<< endl;
 			printf("op : %u\n", Buffer.op);
 			printf("Hardware type = %u\n", Buffer.hw_type);
 			printf("hopcount : %u\n", Buffer.hop_count);
 			printf("transaction id : %u\n", Buffer.tx_id);
+<<<<<<< HEAD
 			printf("nsecs : %x\n", Buffer.nsecs);
+=======
+			printf("nsecs : %u\n", Buffer.nsecs);
+>>>>>>> 09b0e4554ba7445da4985d5c4a443ab4cfd3c54f
 			printf("cipaddr : %s\n", inet_ntoa(Buffer.cipaddr));
 			printf("yipaddr : %s\n", inet_ntoa(Buffer.yipaddr));
 			printf("sipaddr : %s\n", inet_ntoa(Buffer.sipaddr));
