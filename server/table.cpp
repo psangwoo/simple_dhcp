@@ -1,7 +1,9 @@
 #include "dhcpark.h"
 
-int allocInfo::addrtoalloc(int pos, int size)
+int allocInfo::addrtoalloc(int pos, int size, int clientpos)
 {
+	if(pos == clientpos && this->table[clientpos] != 0) // when renewal
+		return pos;
 
 	if(pos > 0 && pos < size) // when requested specific ip
 	{
@@ -15,6 +17,7 @@ int allocInfo::addrtoalloc(int pos, int size)
 	}
 	return -1; // nowhere to allocate
 }
+
 /*
 void savealloc(int pos, int alloctime)
 {
@@ -25,8 +28,9 @@ void savealloc(int pos, int alloctime)
 void allocInfo::noticealloc(int pos, int alloctime)
 {
 	pthread_mutex_lock(&this->mtx);
-	this->table[pos] = time(NULL) + alloctime;
-	cout << "alloced at " << pos << " of time " << this->table[pos] << " Amount : " << alloctime << endl;
+	int toalloctime = time(NULL) + alloctime - 1;
+	this->table[pos] = toalloctime; 
+	write_lease(this->conf.subnet, pos, toalloctime);
 	pthread_mutex_unlock(&this->mtx);
 	//savealloc(pos, alloctime);
 }
@@ -43,19 +47,46 @@ void allocInfo::mutex_init(void)
 	pthread_mutex_init(&this->mtx, NULL);
 }
 
-
-void readfromlease(int table[])
+string getserveraddr(string subnet)
 {
-	/*
-	ifstream leaseFile("dhcpark.leases");
-	string line;
-	while(getline(leaseFile, line))
+	struct ifaddrs *addrs, *addr;
+	getifaddrs(&addrs);
+	addr = addrs;
+	while(addr)
 	{
-		if(!strncmp(line.c_str(), "Block", 5))
-			;
+		struct sockaddr_in temp;
+		memcpy(&temp, addr->ifa_addr, sizeof(temp));
+		string tmp = inet_ntoa(temp.sin_addr);
+		if(!tmp.compare(0, tmp.size() - 1, subnet))
+		{
+			freeifaddrs(addrs);
+			return tmp;
+		}
+		addr = addr->ifa_next;
 	}
-	close(leaseFile);
-	*/
+	freeifaddrs(addrs);
+	return "";
+}
+
+char *findnic(string subnet)
+{
+	struct ifaddrs *addrs, *addr;
+	getifaddrs(&addrs);	
+	addr = addrs;
+	while(addr)
+	{						
+		struct sockaddr_in temp;		
+		memcpy(&temp, addr->ifa_addr, sizeof(temp));								
+		string tmp = inet_ntoa(temp.sin_addr);
+		if(!tmp.compare(0, tmp.size() - 1, subnet))
+		{
+			return addr->ifa_name;					
+		}
+		addr = addr->ifa_next;						
+	}				
+	freeifaddrs(addrs);
+
+	return NULL;
 }
 
 void *timer(void *tmp)
@@ -65,7 +96,7 @@ void *timer(void *tmp)
 	clock_t curtime;
 	while(1)
 	{
-		cout << "TABLE : " << endl;
+//		printf("TABLE %u : \n", info->conf.serveraddr[0]);
 		curtime = time(NULL);
 		for(int i = 0 ; i < size; i++)
 		{
@@ -74,25 +105,23 @@ void *timer(void *tmp)
 			else if(info->table[i] <= curtime) // dealloc ip
 				info->freealloc(i);
 
-			if(info->table[i] > 0)
-				printf("%d : %d\n", i, info->table[i] - curtime);
+			if(info->table[i] > 0);
+//			printf("%d : %d\n", i, info->table[i] - curtime);
 		}
 		sleep(1);
 	}
 }
 
-
 int *init_table(struct configData conf)
 {
-	int n = 153;
-	int m = 3;
 
 	int *table = new int[conf.maxrange + 1];
 
 	for(int i = 0 ; i < conf.minrange; i++)
 		table[i] = TIME_SPECIAL;
+	for(int i = conf.minrange; i < conf.maxrange + 1; i++)
+		table[i] = 0;
 
-	readfromlease(table);
 		
 	return table;
 }

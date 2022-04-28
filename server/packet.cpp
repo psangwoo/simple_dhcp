@@ -1,6 +1,9 @@
 #include "dhcpark.h"
 
-struct dhcp_packet build_packet(struct dhcp_packet received, allocInfo info)
+
+
+
+struct dhcp_packet build_packet(struct dhcp_packet received, allocInfo info, int *sendsize)
 {
 
 	struct dhcp_packet ret;
@@ -11,11 +14,26 @@ struct dhcp_packet build_packet(struct dhcp_packet received, allocInfo info)
 	memcpy(&ret, &received, 236);
 
 	memset(&ret.op, 0x02, sizeof(ret.op));
-
+	bool alloced = false;
+	bool released = false;
 	int req = 0;
 	int leaset = 0;
 	int digit = 16777216;
 
+
+
+	int clientpos = -1;
+	if(strcmp(inet_ntoa(received.cipaddr), "0.0.0.0"))
+	{
+		clientpos = stoi(split(inet_ntoa(received.cipaddr), '.')[3]);
+		req = clientpos;
+	}
+
+
+
+
+
+	/* Magic Cookie */
 	opt.push_back(0x63);
 	opt.push_back(0x82);
 	opt.push_back(0x53);
@@ -33,14 +51,15 @@ struct dhcp_packet build_packet(struct dhcp_packet received, allocInfo info)
 			case 50: // Requested IP : check if this ip is empty, return this ip if can otherwise available ip address to YIPADDR area
 				req = received.options[i + 3];
 				break;
-			case 53: // Opcode : Include accordin t o this value
+			case 53: // Opcode : Include according to this value
 				opt.push_back(53);
 				opt.push_back(1);
-				if(received.options[i] == 1) // if discover, reply offer
-					opt.push_back(2);
-				else if(received.options[i] == 3) // if request, reply ack
+				if(received.options[i] == DISCOVER) // if discover, reply offer
+					opt.push_back(OFFER);
+				else if(received.options[i] == REQUEST) // if request, reply ack
 				{
-					opt.push_back(5);
+					alloced = true;
+					opt.push_back(ACK);
 					
 					opt.push_back(54); // send server info
 					opt.push_back(4);
@@ -53,10 +72,15 @@ struct dhcp_packet build_packet(struct dhcp_packet received, allocInfo info)
 					{
 						opt.push_back(uc);
 						leaset += (int )uc * digit;
-						printf("leaset : %d uc = %d digit : %d\n", leaset, (int)uc, digit);
 						digit /= 256;
 					}
 				}
+				else if(received.options[i] == RELEASE || received.options[i] == 255) // if release, release and no send file
+				{
+					info.freealloc(clientpos);
+					released = true;
+				}
+
 				break;
 			case 54: // Server ID - check this with my ip , revert if not equal
 				break;
@@ -82,7 +106,7 @@ struct dhcp_packet build_packet(struct dhcp_packet received, allocInfo info)
 						case 6: // DNS Address
 							opt.push_back(6);
 							opt.push_back(4);
-							for(unsigned char uc : info.conf.broadcast)
+							for(unsigned char uc : info.conf.dns)
 								opt.push_back(uc);
 							break;
 						case 12: // Host Name
@@ -138,25 +162,26 @@ struct dhcp_packet build_packet(struct dhcp_packet received, allocInfo info)
 
 	}
 
-	req = info.addrtoalloc(req, info.conf.maxrange);
+	req = info.addrtoalloc(req, info.conf.maxrange, clientpos);
 
 	
 	string ipaddr;
 	ipaddr = info.conf.subnet;
-	cout << ipaddr << endl;
 	ipaddr += to_string(req);
 
 
-	cout << ipaddr << endl;
 
 	inet_aton(ipaddr.c_str(), &ret.yipaddr);
 
-	info.noticealloc(req, leaset);
+	if(alloced)
+		info.noticealloc(req, leaset);
 
 	opt.push_back(255);
 
 
 	memcpy(ret.options, &opt.front(), opt.size());
+
+	*sendsize = ((opt.size() + 236) / 32 + 1) * 32;
 	return ret;
 
 }
@@ -175,22 +200,30 @@ void *dhcp(void *tmp)
 	socklen_t clientAddressSize = 0;
 
 	serverInfo.sin_family = AF_INET; // use IPv4
-	serverInfo.sin_addr.s_addr = htonl(INADDR_ANY); // htonl : change type long's byte sequence, host to network
+	serverInfo.sin_addr.s_addr = htons(INADDR_ANY); // htonl : change type long's byte sequence, host to network
 	serverInfo.sin_port = htons(PORT_DHCP_SERVER); // htons : change type short's byte sequence, host to network
-	// SOCKET listenerSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP); // tcp 
-	//
+	
 	int serverSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP); // udp
 	int option = 1;
 	setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &option, sizeof(option)); // set multiple access to single port possible
+	setsockopt(serverSocket, SOL_SOCKET, SO_BROADCAST, &option, sizeof(option)); // set broadcast available
+
 	struct sockaddr_in sendInfo = {};
 
 	sendInfo.sin_family = AF_INET;
 	sendInfo.sin_addr.s_addr = htonl(INADDR_BROADCAST);
 	sendInfo.sin_port = htons(PORT_DHCP_CLIENT);
-	int sendSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
-	setsockopt(sendSocket, SOL_SOCKET, SO_REUSEADDR, &option, sizeof(option));
-	setsockopt(sendSocket, SOL_SOCKET, SO_BROADCAST, &option, sizeof(option)); 	
 
+	char *nicName = findnic(info->conf.subnet);
+	if(nicName == NULL)
+	{
+		printf("No corresponding Network Interface , Quit\n");
+		return (void *)-1;
+	}
+	else
+	{
+		setsockopt(serverSocket, SOL_SOCKET, SO_BINDTODEVICE, nicName, sizeof(nicName));
+	}
 	if(serverSocket == -1)
 	{
 		cerr << "Cannot Create Server Socket, Quit." << endl;
@@ -199,27 +232,13 @@ void *dhcp(void *tmp)
 
 	if(bind(serverSocket, (struct sockaddr *)&serverInfo, sizeof(serverInfo)) < 0)
 	{
-		cerr << "Cannot Bind Client Local Address, Quit." << endl;
+//		cerr << "Cannot Bind Client Local Address, Quit." << endl;
 		close(serverSocket);
 		return (void *)-1;
 	}
 
-	if(sendSocket == -1)
-	{
-		cerr << "Cannot Create Send Socket, Quit." << endl;
-		return (void *)-1;
-	}
-
-	if(bind(sendSocket, (struct sockaddr *)&sendInfo, sizeof(sendInfo)) < 0)
-	{
-		cerr << "Cannot Bind Sender Local Address, Quit." << endl;
-		close(serverSocket);
-		return (void *)-1;
-	}
-
-	int sendsize = 0;
-	
-
+	int sendsize = 0;	
+	int sentsize = 0;
 	while(1)
 	{
 		cout << "wait input " << endl;
@@ -229,21 +248,21 @@ void *dhcp(void *tmp)
 				(struct sockaddr *)&clientInfo, &clientAddressSize);
 		if(recvLength > 0)
 		{
-			
-			struct dhcp_packet sendBuf = build_packet(Buffer, *info);
-
-			sendsize = sendto(sendSocket, (char *)&sendBuf, sizeof(sendBuf), 0, \
-					(struct sockaddr *)&sendInfo, sizeof(sendInfo));
+			struct dhcp_packet sendBuf = build_packet(Buffer, *info, &sendsize);
+			if(!strcmp(inet_ntoa(clientInfo.sin_addr),"0.0.0.0"))
+				sentsize = sendto(serverSocket, (char *)&sendBuf, sendsize, 0, \
+						(struct sockaddr *)&sendInfo, sizeof(sendInfo));
+			else
+				sentsize = sendto(serverSocket, (char *)&sendBuf, sendsize, 0, \
+						(struct sockaddr *)&clientInfo, sizeof(clientInfo));
+			printf("SENT TO %s\n", inet_ntoa(clientInfo.sin_addr));
 			if(sendsize < 0)
 			{
 				cerr << "Couldn't Reply, Quit.\n" <<endl;
 				return (void *)-1;
 			}
-
-
 		}
 	}
 	close(serverSocket);
 }
-
 

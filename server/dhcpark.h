@@ -6,6 +6,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <sys/types.h>
+#include <ifaddrs.h>
 
 #include <iostream>
 #include <fstream>
@@ -28,10 +30,10 @@ using namespace std;
 using std::cout;
 using std::cerr;
 using std::endl;
+
 enum configVariables
 {
-	SERVER = 0,
-    DNS,
+    DNS = 0,
 	DNSNAME,	
 	LEASETIME,		
 	SUBNET,		
@@ -41,6 +43,19 @@ enum configVariables
 	BROADCAST,
 	GATEWAY
 };
+
+enum messageTypes
+{
+	DISCOVER = 1,
+	OFFER,
+	REQUEST,
+	DECLINE,
+	ACK,
+	NACK,
+	RELEASE,
+	INFORM
+};
+
 
 struct configData
 {
@@ -58,16 +73,17 @@ struct configData
 
 class allocInfo
 {
-	private:
-		pthread_mutex_t mtx;
 	public:
 		int *table;
 		struct configData conf;
-		int addrtoalloc(int , int );
+		int addrtoalloc(int , int , int );
 		void noticealloc(int , int );
 		void freealloc(int );
 		void mutex_init();
+	private:
+		pthread_mutex_t mtx;
 };
+
 struct dhcp_packet
 {
 	u_int8_t op; 								/*   0 : Opcode */
@@ -89,12 +105,18 @@ struct dhcp_packet
 
 map<string, int> map_create(void);
 vector<string> split(string , char );
-struct configData readfromconfig(void);
+vector<struct configData> readfromconfig(void);
 
 void readfromlease(int table[]);
+string getserveraddr(string );
+char *findnic(string );
 void *timer(void * );
 int *init_table(struct configData );
 
 struct dhcp_packet build_packet(struct dhcp_packet , allocInfo );
 void *dhcp(void * );
+
+void init_lease();
+void read_lease(int *, struct configData );
+void write_lease(string , int , int );
 

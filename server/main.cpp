@@ -3,20 +3,43 @@
 
 int main(void)
 {
-	allocInfo contrl;
+	vector<allocInfo> contrl;
+	vector<struct configData> tmp = readfromconfig();
+	init_lease();
+	for(int i = 0; i < tmp.size(); i++)
+	{
+		allocInfo tmpcls = {};
+		tmpcls.conf = tmp[i];
+		char *interface = findnic(tmpcls.conf.subnet);
+		if(interface == NULL)
+		{
+			cout << "No corresponding subnet found." << tmpcls.conf.subnet << endl;
+			continue;
+		}
+/*
+		string filename = tmpcls.conf.subnet + "leases";
+		tmpcls.leasefile->open(filename);
+		if(tmpcls.leasefile == NULL)
+		{
+			cerr << "Leasefile not open.. Quit."  << endl;
+			continue;
+		}
+		*/
+		tmpcls.table = init_table(tmpcls.conf);
+		tmpcls.mutex_init();
+		read_lease(tmpcls.table, tmpcls.conf);
+		contrl.push_back(tmpcls);
+	}
 
-	contrl.conf = readfromconfig();
-	contrl.table = init_table(contrl.conf);
-	contrl.mutex_init();
-	pthread_t pthr[2];
-
-	pthread_create(&pthr[0], NULL, timer, (void *)&contrl);
-	pthread_create(&pthr[1], NULL, dhcp, (void *)&contrl);
-
+	pthread_t *pthr = new pthread_t[tmp.size()];
+	for(int i = 0 ; i < contrl.size(); i++)		
+	{
+		pthread_create(&pthr[i], NULL, timer, (void *)&contrl[i]);
+		pthread_create(&pthr[i], NULL, dhcp, (void *)&contrl[i]);
+	}
 	int status;
-	
-	pthread_join(pthr[0], (void **)&status);
-	pthread_join(pthr[1], (void **)&status);
+	for(int i = 0; i < contrl.size(); i++)	
+		pthread_join(pthr[i], (void **)&status);
 
 	return 0;
 }
