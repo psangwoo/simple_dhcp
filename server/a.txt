@@ -1,0 +1,2754 @@
+check123
+line : domain-name = google.com
+line : domain-name-servers = 8.8.8.8
+line : lease-time = 300
+line : subnet = 192.168.0.0
+line : netmask = 255.255.255.0
+line : range-min = 192.168.0.3
+line : range-max = 192.168.0.105
+line : broadcast-address = 192.168.0.255
+line : gateway = 192.168.0.1
+line : end
+SDF
+asd
+1.0.0.0
+asd
+2.0.0.0
+asd
+3.0.0.0
+asd
+4.0.0.0
+asd
+127.0.0.1
+asd
+192.168.0.2
+23
+line : domain-name = google.com
+line : domain-name-servers = 8.8.8.8
+line : lease-time = 400
+line : subnet = 172.20.0.0
+line : netmask = 255.255.255.0
+line : range-min = 172.20.0.14
+line : range-max = 172.20.0.30
+line : broadcast-address = 172.20.0.255
+line : gateway = 172.20.0.1
+line : end
+SDF
+asd
+1.0.0.0
+asd
+2.0.0.0
+asd
+3.0.0.0
+asd
+4.0.0.0
+asd
+127.0.0.1
+asd
+192.168.0.2
+asd
+10.0.2.2
+asd
+172.20.0.2
+23
+line : domain-name = google.com
+line : domain-name-servers = 8.8.8.8
+line : lease-time = 500
+line : subnet = 10.0.2.0 
+line : netmask = 255.255.255.0
+line : range-min = 10.0.2.66
+line : range-max = 10.0.2.90
+line : broadcast-address = 10.0.2.255
+line : gateway = 10.0.2.1
+line : end
+SDF
+asd
+1.0.0.0
+asd
+2.0.0.0
+asd
+3.0.0.0
+asd
+4.0.0.0
+asd
+127.0.0.1
+asd
+192.168.0.2
+asd
+10.0.2.2
+23
+check 
+172.20.0.14
+1651106781
+10.0.2.66
+1651106882
+192.168.0.3
+1651106684
+10.0.2.69
+1651106884
+192.168.0.3
+1651106952
+wait input 
+wait input 
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651107144 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651107098 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651107323 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651107323 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651107333 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651107243 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651107535 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651107359 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651107567 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651107488 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651107498 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651107764 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651107671 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651107775 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651107616 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651107830 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651107747 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651107996 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651108002 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651107865 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651107985 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651107995 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651108206 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651108214 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651108167 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108139 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651108433 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651108445 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651108361 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108272 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+192.168.0.
+192.168.0.3
+adfs : 192.168.0.3 | 256
+wait input 
+192.168.0.
+192.168.0.3
+adfs : 0.0.0.0 | 288
+wait input 
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108352 Amount : 300
+adfs : 0.0.0.0 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651108521 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651108644 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651108651 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108542 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108549 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651108677 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108675 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651108877 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651108887 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108691 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651108856 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108800 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108812 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651109100 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108917 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651109125 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651108939 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651109048 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109056 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109091 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651109214 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651109319 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651109327 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109193 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109220 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651109407 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651109517 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109329 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109350 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651109566 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109444 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651109563 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109472 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651109763 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109566 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109593 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651109804 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651109722 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109701 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109733 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651109997 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651109912 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651110031 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109833 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109879 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651109957 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651110092 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110020 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651110225 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651110233 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110097 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651110245 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110161 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651110419 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110247 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651110468 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110286 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651110437 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110370 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110413 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651110628 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110497 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651110707 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651110638 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110558 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110648 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651110877 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110678 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651110898 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651110810 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110770 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110805 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651111066 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110889 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651110998 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651111112 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651110943 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111039 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111065 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651111173 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651111280 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651111328 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111185 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111204 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651111346 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111308 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651111515 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111349 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651111550 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651111507 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111435 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111467 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651111713 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111567 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651111670 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651111777 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111591 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111699 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651111910 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111725 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651111850 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651111999 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111818 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111842 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651112005 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651112140 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111948 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651111970 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651112237 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112072 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112086 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651112193 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651112378 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112194 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112220 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651112359 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651112463 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112332 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112354 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651112580 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651112538 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112452 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112493 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651112700 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112603 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651112817 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112621 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651112730 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651112901 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112741 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112750 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651112883 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651113026 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112863 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112872 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651113109 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651113057 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651112979 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651113216 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113018 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113094 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651113217 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651113334 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113150 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113209 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651113414 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113292 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651113411 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113339 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651113566 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113412 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651113639 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113476 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651113596 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113550 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651113761 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113623 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651113834 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651113788 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113688 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113767 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651114012 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113831 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651113941 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651114061 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113886 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651113965 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114004 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651114231 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651114137 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114094 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651114310 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114129 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651114306 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114222 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651114441 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114250 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651114500 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114361 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651114485 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114397 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651114670 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114499 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651114707 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114531 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651114675 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114636 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114647 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651114912 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651114912 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651114830 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114776 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114779 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651115106 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651115111 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651115019 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114923 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651114924 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115037 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115071 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651115173 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651115329 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651115334 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115184 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115196 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651115349 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115303 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651115529 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651115544 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115345 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651115502 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115434 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115468 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651115779 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115581 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651115791 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651115698 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115618 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115725 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115737 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651115885 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651116007 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651116023 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115857 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115877 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651116057 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651115998 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651116201 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116017 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651116232 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116130 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116143 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651116253 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651116406 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651116440 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116262 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116274 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651116444 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116389 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116392 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651116614 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651116630 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116508 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651116608 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116511 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116624 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116628 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651116859 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651116873 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651116784 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116752 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116767 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651116952 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651117092 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651117093 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116900 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651116913 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651117128 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117039 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117043 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651117292 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651117328 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117163 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117185 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651117328 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117296 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651117518 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651117530 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117333 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651117523 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117438 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117460 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651117746 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651117759 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117576 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651117694 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117597 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117693 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117746 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651117949 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651117853 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651117969 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117808 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117877 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651117929 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651118055 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651118168 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651118177 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118005 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118046 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651118220 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118154 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118167 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651118377 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651118412 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118282 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118283 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651118400 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118409 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651118612 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651118614 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118427 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651118565 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118557 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118560 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651118804 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651118821 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651118730 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118686 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118699 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651119001 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118804 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118822 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651118927 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651119072 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118942 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651118942 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651119128 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651119244 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119063 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119073 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651119295 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119179 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651119286 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119220 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651119462 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651119501 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119316 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119365 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651119483 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119443 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651119662 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651119708 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119511 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119560 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651119663 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119642 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119679 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651119900 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651119852 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651119959 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119793 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119800 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.66
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.66
+alloced at 10.0.2.66 of time 1651120097 Amount : 500
+adfs : 10.0.2.66 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119912 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 172.20.0.14
+ALLCOED = TRUE 
+172.20.0.
+172.20.0.14
+alloced at 172.20.0.14 of time 1651120021 Amount : 400
+adfs : 172.20.0.14 | 320
+wait input 
+client pos : 192.168.0.3
+ALLCOED = TRUE 
+192.168.0.
+192.168.0.3
+alloced at 192.168.0.3 of time 1651119942 Amount : 300
+adfs : 192.168.0.3 | 320
+wait input 
+client pos : 10.0.2.69
+ALLCOED = TRUE 
+10.0.2.
+10.0.2.69
+alloced at 10.0.2.69 of time 1651120169 Amount : 500
+adfs : 10.0.2.69 | 320
+wait input 
